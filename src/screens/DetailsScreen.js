@@ -31,13 +31,13 @@ export default function DetailsScreen({ navigation }) {
   const getSocialMediaIcon = (social) => {
     switch (social) {
       case 'facebook':
-        return require('../assets/facebook.png');
+        return require('../../assets/facebook.png');
       case 'x':
-        return require('../assets/x.png');
+        return require('../../assets/x.png');
       case 'instagram':
-        return require('../assets/instagram.png');
+        return require('../../assets/instagram.png');
       case 'linkedin':
-        return require('../assets/linkedin.png');
+        return require('../../assets/linkedin.png');
       default:
         return null;
     }
