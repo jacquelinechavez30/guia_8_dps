@@ -1,6 +1,6 @@
 import React from 'react';
 import StepScreen from './StepScreen';
-import Inicio from './inicio';
+import Inicio from './HomeScreen';
 
 const StepsScreen = ({ steps, navigation }) => {
   const [currentStep, setCurrentStep] = React.useState(0);
@@ -10,7 +10,17 @@ const StepsScreen = ({ steps, navigation }) => {
       setCurrentStep(currentStep + 1);
     } else {
       // Si estamos en el último paso, podemos navegar a otra pantalla o reiniciar los pasos
-      navigation.navigate('Inicio'); // Esto es solo un ejemplo, puedes cambiarlo según tu flujo de la aplicación
+      setCurrentStep(0); // Resetear los pasos al principio
+
+
+      // También puedes reiniciar la app aquí, por ejemplo:
+      // navigation.reset({
+      //   index: 0,
+      //   routes: [{ name: 'Home' }],
+      // });
+
+      // O simplemente navegar a la pantalla de inicio, por ejemplo:
+     // navigation.navigate('Inicio'); // Esto es solo un ejemplo, puedes cambiarlo según tu flujo de la aplicación
     }
   };
 
